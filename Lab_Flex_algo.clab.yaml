@@ -1,0 +1,39 @@
+name: Lab_Flex_algo
+topology:
+  kinds:
+    nokia_srsim:
+      license: /home/jesusdavid/Licenses/SR_SIM25_1.txt
+      image: localhost/nokia/srsim:25.10.R2
+  nodes:
+    PE1:
+      kind: nokia_srsim
+      type: sr-1
+    PE2:
+      kind: nokia_srsim
+      type: sr-1
+    P1:
+      kind: nokia_srsim
+      type: sr-1
+    P2:
+      kind: nokia_srsim
+      type: sr-1
+    P3:
+      kind: nokia_srsim
+      type: sr-1
+    P4:
+      kind: nokia_srsim
+      type: sr-1
+    P5:
+      kind: nokia_srsim
+      type: sr-1
+  links:
+    # Path A
+    - endpoints: [ "PE1:1/1/c1/1", "P1:1/1/c1/1" ]
+    - endpoints: [ "P1:1/1/c2/1", "P2:1/1/c1/1" ]
+    - endpoints: [ "P2:1/1/c2/1", "PE2:1/1/c1/1" ]
+
+    # Path B
+    - endpoints: [ "PE1:1/1/c2/1", "P3:1/1/c1/1" ]
+    - endpoints: [ "P3:1/1/c2/1", "P4:1/1/c1/1" ]
+    - endpoints: [ "P4:1/1/c2/1", "P5:1/1/c1/1" ]
+    - endpoints: [ "P5:1/1/c2/1", "PE2:1/1/c2/1" ]
