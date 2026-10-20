@@ -11,13 +11,20 @@ Algorithm	Optimizes / avoids	Service
 
 The lab is built to show why each path is chosen, and what happens when links fail, FADs compete or nodes stop participating.
 
+
+
 What you will learn
 
 What a Flexible Algorithm Definition (FAD) is, why one or two nodes advertising it is enough, and how FAD election works.
+
 Why every algorithm needs its own prefix node-SID: the label is the only thing that tells a P router which SPF to use.
+
 How the path changes with the metric type (IGP, TE, delay) and with admin-group constraints.
+
 How SR OS binds a service to an algorithm: vrf-import policy with action flex-algo.
+
 Failure behavior: algorithms with no path, allow-flex-algo-fallback, and TI-LFA constrained to the algorithm topology.
+
 
 
 Topology:
