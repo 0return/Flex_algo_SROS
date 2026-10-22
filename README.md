@@ -47,20 +47,10 @@ Four VPRNs between PE1 and PE2 share the same BGP next hop (`2.2.2.2`), yet each
 
 ## Topology
 
-```mermaid
-graph LR
-  PE1["PE1<br/>1.1.1.1"] --- P1["P1<br/>100.0.0.1"]
-  P1 ===|RED| P2["P2<br/>100.0.0.2"]
-  P2 --- PE2["PE2<br/>2.2.2.2"]
-  PE1 --- P6["P6<br/>100.0.0.6"]
-  P6 --- P7["P7<br/>100.0.0.7"]
-  P7 --- PE2
-  PE1 --- P3["P3<br/>100.0.0.3"]
-  P3 --- P4["P4<br/>100.0.0.4"]
-  P4 ===|RED| P5["P5<br/>100.0.0.5"]
-  P5 --- PE2
-  P4 --- P7
-```
+
+<img width="907" height="320" alt="image" src="https://github.com/user-attachments/assets/a48a866d-d0e8-404f-bee3-91152e846dff" />
+
+
 
 Three parallel routes (north, middle, south) plus one cross link (P4–P7).
 
